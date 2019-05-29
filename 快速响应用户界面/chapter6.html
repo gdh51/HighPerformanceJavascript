@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    String.prototype.findexOf = function (str) {
+      let tarLength = str.length;
+      let length = this.length - tarLength + 1;
+      for(let i = 0; i < length; i++){
+        if(this.substr(i,tarLength) == str){
+          return i;
+        }
+      }
+    }
+
+    console.log('abc'.findexOf('b'));
+    let OPTION_A = 1;// 1
+    let OPTION_B = 2;// 10
+    let OPTION_C = 4;// 100
+    let OPTION_D = 8;// 1000
+    let OPTION_E = 16;// 10000
+
+    let options = OPTION_A | OPTION_C | OPTION_D;
+    console.log(OPTION_A & options)
+  </script>
+</body>
+</html>
